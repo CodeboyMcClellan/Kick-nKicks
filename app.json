@@ -1,0 +1,74 @@
+{
+  "expo": {
+    "name": "Kick'n Kicks",
+    "slug": "kickn-kicks",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "scheme": "kicknkicks",
+    "splash": {
+      "image": "./assets/splash-icon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#E63946"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.kicknkicks.app",
+      "usesAppleSignIn": true,
+      "infoPlist": {
+        "NSLocationWhenInUseUsageDescription": "Kick'n Kicks uses your location to find nearby cobblers.",
+        "NSPhotoLibraryUsageDescription": "Upload photos of your sneakers for listings and restoration quotes.",
+        "NSCameraUsageDescription": "Take photos of your sneakers for listings and restoration.",
+        "ITSAppUsesNonExemptEncryption": false
+      }
+    },
+    "android": {
+      "package": "com.kicknkicks.app",
+      "adaptiveIcon": {
+        "backgroundColor": "#E63946",
+        "foregroundImage": "./assets/android-icon-foreground.png",
+        "backgroundImage": "./assets/android-icon-background.png",
+        "monochromeImage": "./assets/android-icon-monochrome.png"
+      },
+      "permissions": [
+        "android.permission.ACCESS_FINE_LOCATION",
+        "android.permission.ACCESS_COARSE_LOCATION",
+        "android.permission.READ_EXTERNAL_STORAGE",
+        "android.permission.CAMERA",
+        "android.permission.RECORD_AUDIO"
+      ]
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      "expo-secure-store",
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "Upload sneaker photos for listings and restoration."
+        }
+      ],
+      [
+        "expo-location",
+        {
+          "locationWhenInUsePermission": "Find cobblers near you."
+        }
+      ],
+      [
+        "@stripe/stripe-react-native",
+        {
+          "merchantIdentifier": "merchant.com.kicknkicks.app",
+          "enableGooglePay": true
+        }
+      ]
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "a086d0c4-35fd-46ee-bbd5-5ff42bb3359e"
+      }
+    },
+    "owner": "undefeatedj-llc"
+  }
+}
