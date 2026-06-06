@@ -118,9 +118,7 @@ export function AppStoreScreenshotsScreen({
         keyExtractor={(item) => item.id}
         contentContainerStyle={styles.list}
         showsVerticalScrollIndicator={false}
-        renderItem={({ item }) => {
-          const MockScreen = item.MockScreen;
-          return (
+        renderItem={({ item }) => (
             <View style={styles.card}>
               <View style={styles.cardHeader}>
                 <Text style={styles.cardTitle}>{item.id.replace(/-/g, ' ')}</Text>
@@ -154,35 +152,27 @@ export function AppStoreScreenshotsScreen({
                       height: CANVAS_HEIGHT,
                     }}
                   >
-                    <AppStoreScreenshot headline={item.headline}>
-                      <MockScreen />
-                    </AppStoreScreenshot>
+                    <AppStoreScreenshotItem id={item.id} />
                   </View>
                 </View>
               </ScrollView>
             </View>
-          );
-        }}
+          )}
       />
 
       <View style={styles.offscreen} pointerEvents="none">
-        {APP_STORE_SCREENSHOTS.map((item) => {
-          const MockScreen = item.MockScreen;
-          return (
-            <View
-              key={`capture-${item.id}`}
-              ref={(node) => {
-                captureRefs.current[item.id] = node;
-              }}
-              collapsable={false}
-              style={styles.fullCanvas}
-            >
-              <AppStoreScreenshot headline={item.headline}>
-                <MockScreen />
-              </AppStoreScreenshot>
-            </View>
-          );
-        })}
+        {APP_STORE_SCREENSHOTS.map((item) => (
+          <View
+            key={`capture-${item.id}`}
+            ref={(node) => {
+              captureRefs.current[item.id] = node;
+            }}
+            collapsable={false}
+            style={styles.fullCanvas}
+          >
+            <AppStoreScreenshotItem id={item.id} />
+          </View>
+        ))}
       </View>
     </View>
   );
