@@ -49,6 +49,15 @@ export function ProfileScreen({ navigation }: TabScreenProps<'ProfileTab'>) {
       </Pressable>
 
       <Pressable
+        onPress={() => navigation.navigate('AppStoreScreenshots')}
+        className="flex-row items-center py-4 border-b border-gray-100"
+      >
+        <Ionicons name="images" size={22} color={colors.text} />
+        <Text className="flex-1 ml-3 text-base text-gray-900">App Store Screenshots</Text>
+        <Ionicons name="chevron-forward" size={20} color="#ADB5BD" />
+      </Pressable>
+
+      <Pressable
         onPress={() => navigation.navigate('Sustainability')}
         className="flex-row items-center py-4 border-b border-gray-100"
       >

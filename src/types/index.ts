@@ -125,6 +125,7 @@ export type RootStackParamList = {
   SellerDashboard: undefined;
   Sustainability: undefined;
   Chat: { conversationId?: string };
+  AppStoreScreenshots: undefined;
 };
 
 export type TabParamList = {

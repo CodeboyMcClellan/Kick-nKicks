@@ -14,6 +14,7 @@ import { CheckoutScreen } from '../screens/CheckoutScreen';
 import { OrderTrackingScreen } from '../screens/OrderTrackingScreen';
 import { SellerDashboardScreen } from '../screens/SellerDashboardScreen';
 import { SustainabilityScreen } from '../screens/SustainabilityScreen';
+import { AppStoreScreenshotsScreen } from '../screens/AppStoreScreenshotsScreen';
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
 
@@ -49,6 +50,7 @@ export function AppNavigator() {
             <Stack.Screen name="OrderTracking" component={OrderTrackingScreen} />
             <Stack.Screen name="SellerDashboard" component={SellerDashboardScreen} />
             <Stack.Screen name="Sustainability" component={SustainabilityScreen} />
+            <Stack.Screen name="AppStoreScreenshots" component={AppStoreScreenshotsScreen} />
           </>
         )}
       </Stack.Navigator>
