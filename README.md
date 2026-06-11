@@ -77,3 +77,4 @@ src/
 3. Enable Google/Apple OAuth in Supabase dashboard
 4. Replace mock data with Supabase queries
 5. Add `react-native-maps` API keys for production builds
+# Kick-nKicks
